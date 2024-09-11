@@ -1,13 +1,14 @@
 import java.lang.Math;
 
 public class Fibonacci {
-    int N_, fib_;
+    int N_;
+    long fib_;
     boolean great;
 
     public Fibonacci(int N) {
         N_ = N;
         calculate();
-        great = Math.pow(1.75, N) > fib_;
+        great = Math.pow(1.75, N) < fib_;
     }
 
     void calculate() {
@@ -23,6 +24,6 @@ public class Fibonacci {
     }
 
     void output() {
-        System.out.println("Fib = " + fib_ + ", and it is" + (great ? "" : " not") + " greater than 1.75^" + N_);
+        System.out.println("Fib(" + N_ + ") = " + fib_ + ", and it is " + (great ? "greater" : "fewer") + " than 1.75^" + N_);
     }
 }
