@@ -5,12 +5,14 @@ public class Fibonacci {
     long fib_;
     boolean great;
 
+
     public Fibonacci(int N) {
         N_ = N;
         calculate();
         great = Math.pow(1.75, N) < fib_;
     }
 
+    /* Calculating fibonacci and caching into private variables */
     void calculate() {
             int a, b, c;
             a = b = 1;
